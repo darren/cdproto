@@ -292,7 +292,7 @@ func (t *CookieSameSite) UnmarshalEasyJSON(in *jlexer.Lexer) {
 		*t = CookieSameSiteLax
 
 	default:
-		in.AddError(errors.New("unknown CookieSameSite value"))
+		//in.AddError(errors.New("unknown CookieSameSite value"))
 	}
 }
 
