@@ -2189,6 +2189,9 @@ func UnmarshalMessage(msg *Message) (interface{}, error) {
 
 	case EventTracingTracingComplete:
 		v = new(tracing.EventTracingComplete)
+
+	default:
+		return nil, fmt.Errorf("unknown method: %s", msg.Method)
 	}
 
 	var buf easyjson.RawMessage
